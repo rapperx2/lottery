@@ -603,7 +603,7 @@ public class LotteryOrderServiceImpl extends ServiceImpl<LotteryOrderMapper, Lot
             shop.setBalance(shop.getBalance().subtract(procedures));
             shopService.updateById(shop);
             //修改出票状态
-            lotteryOrderDO.setState(ticketing.getState());
+            lotteryOrderDO.setState("1");
             lotteryOrderDO.setTicketingTime(new Date());
             lotteryOrderMapper.updateById(lotteryOrderDO);
         }
